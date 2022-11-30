@@ -11,9 +11,9 @@
         </section>
 
         <section class="mt-10">
-          <%= form_with url: "resources/create", method: :post do |form| %>
+          <%= form_with url: "resources/create", method: :post, data: { turbo_frame: "resources" } do |form| %>
             <div class="flex items-stretch mt-5">
-                <%= form.url_field :email, class: "bg-slate-200 rounded-r-none text-base leading-none text-gray-800 p-2 w-4/5 border border-transparent focus:outline-none focus:border-gray-500", placeholder: "Longer url .. ", required: true %>
+                <%= form.url_field :long_url, class: "bg-slate-200 rounded-r-none text-base leading-none text-gray-800 p-2 w-4/5 border border-transparent focus:outline-none focus:border-gray-500", placeholder: "Longer url .. ", required: true %>
                 <%= form.submit "shorten", class: "w-32 cursor-pointer rounded-l-none hover:bg-indigo-600 bg-indigo-700 text-xs font-medium leading-none text-white p-2 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700" %>
             </div>
           <% end %>

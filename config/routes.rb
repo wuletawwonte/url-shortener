@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   root 'resources#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  post '/resources/create', to: 'resources#create', as: 'resources_create'
 end
