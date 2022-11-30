@@ -5,4 +5,8 @@ export default class extends Controller {
   connect() {
     console.log('Clipboard initiated');
   }
+
+  copyText(event) {
+    console.log(event.params);
+  }
 }
