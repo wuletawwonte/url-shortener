@@ -8,7 +8,7 @@ class ResourcesController < ApplicationController
 
     if @resource.save
       @resources = Resource.all.order(created_at: :desc)
-      render partial: "resources", locals: { resources: @resources }, notice: 'Successfully added.'
+      render partial: "resources", locals: { resources: @resources }, notice: 'URL successfully shortened.'
     else
       redirect_to :index, status: :unprocessable_entity
     end
