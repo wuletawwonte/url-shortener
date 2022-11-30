@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'resources#index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  post '/resources/create', to: 'resources#create', as: 'resources_create'
+  get '/url/:short_url', to: 'resources#bounce', as: 'resources_bounce'
 end
