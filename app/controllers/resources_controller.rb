@@ -16,7 +16,6 @@ class ResourcesController < ApplicationController
 
   def bounce
     @resource = Resource.find_by_short_url(params["short_url"])
-    puts "sdfjsldkfjsldkfjsldkfsdfsdf: #{@resource.long_url}"
     redirect_to @resource.long_url, allow_other_host: true
   end
 
