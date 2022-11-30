@@ -4,6 +4,6 @@ class Resource < ApplicationRecord
 
   private
     def add_short_url
-      self.short_url = "#{base_url}/#{SecureRandom.hex(6)}"
+      self.short_url = SecureRandom.hex(6)
     end
 end
