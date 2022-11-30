@@ -1,4 +1,27 @@
-<div>
-  <h1 class="font-bold text-4xl">Pages#index</h1>
-  <p>Find me in app/views/pages/index.html.erb</p>
-</div>
+    <header class="max-w-lg mx-auto">
+        <a href="#">
+            <h1 class="text-4xl font-bold text-white text-center">URL_Shortener</h1>
+        </a>
+    </header>
+
+    <main class="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 shadow-2xl">
+        <section>
+            <h3 class="font-bold text-2xl">Welcome to URL_Shortener</h3>
+            <p class="text-gray-600 pt-2">Paste the origin url here.</p>
+        </section>
+
+        <section class="mt-10">
+          <%= form_with url: "subscribers/create", method: :post do |form| %>
+            <div class="flex items-stretch mt-5">
+                <%= form.email_field :email, class: "bg-slate-200 rounded-r-none text-base leading-none text-gray-800 p-2 w-4/5 border border-transparent focus:outline-none focus:border-gray-500", placeholder: "Longer url .. ", required: true %>
+                <%= form.submit "shorten", class: "w-32 cursor-pointer rounded-l-none hover:bg-indigo-600 bg-indigo-700 text-xs font-medium leading-none text-white p-2 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700" %>
+            </div>
+          <% end %>
+        </section>
+    </main>
+
+    <footer class="max-w-lg mx-auto flex justify-center text-white">
+        <a href="#" class="hover:underline">Contact</a>
+        <span class="mx-3">•</span>
+        <a href="#" class="hover:underline">Privacy</a>
+    </footer>
