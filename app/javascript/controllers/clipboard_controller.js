@@ -7,6 +7,6 @@ export default class extends Controller {
   }
 
   copyText(event) {
-    console.log(event.params);
+    navigator.clipboard.writeText(event.params.shorturl);
   }
 }
