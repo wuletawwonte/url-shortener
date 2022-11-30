@@ -1,6 +1,6 @@
 class ResourcesController < ApplicationController
   def index
-    @resources = Resource.all.order(created_at: :desc)
+    @resources = Resource.all.order(created_at: :desc).page params[:page]
   end
 
   def create
