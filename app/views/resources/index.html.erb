@@ -18,13 +18,13 @@
         <% end %>
 
         <section class="mt-10">
-          <%= form_with url: "resources/create", method: :post, data: { turbo_frame: "resources" } do |form| %>
+          <%= form_with url: "resources/create", method: :post, data: { turbo_frame: "resources", controller: "alias" } do |form| %>
             <div class="flex items-stretch mt-5">
                 <%= form.url_field :long_url, class: " bg-gray-50 rounded-r-none text-base leading-none text-gray-800 p-2 w-4/5 border border-gray-300 focus:outline-none focus:border-gray-500", placeholder: "Longer url .. ", required: true %>
-                <button type="button" class="cursor-pointer rounded-l-none hover:bg-blue-600 bg-blue-700 text-xs font-medium leading-none text-white p-2 uppercase focus:ring-slate-700">custom</button>
+                <button type="button" data-action="alias#toggleAlias" class="cursor-pointer rounded-l-none hover:bg-blue-600 bg-blue-700 text-xs font-medium leading-none text-white p-2 uppercase focus:ring-slate-700">custom</button>
                 <%= form.submit "shorten", class: "w-32 cursor-pointer rounded-l-none hover:bg-indigo-600 bg-indigo-700 text-xs font-medium leading-none text-white p-2 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700" %>
             </div>
-            <div class="flex mt-2">
+            <div class="flex mt-2" data-alias-target="shorturlWrapper">
                 <span class="inline-flex items-center px-3 text-sm text-gray-800 bg-slate-200">
                     localhost:3000/url/
                 </span>
