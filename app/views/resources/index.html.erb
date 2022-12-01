@@ -28,7 +28,7 @@
                 <span class="inline-flex items-center px-3 text-sm text-gray-800 bg-slate-200">
                     localhost:3000/url/
                 </span>
-                <%= form.text_field :short_url, class: "rounded-none bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2", placeholder: "alias", maxlength: 16 %>
+                <%= form.text_field :short_url, class: "rounded-none bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2", placeholder: "alias", maxlength: 16, data: { "alias-target": "shorturlInput" } %>
             </div>
           <% end %>
         </section>
