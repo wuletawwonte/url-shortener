@@ -22,11 +22,11 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   port: 5433
   username: postgres
+  password: postgres
 
 development:
   <<: *default
   database: url_shortener_development
-  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -84,4 +84,4 @@ test:
 #
 production:
   <<: *default
-    url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>

@@ -1,6 +1,8 @@
 class Resource < ApplicationRecord
   before_create :add_short_url
 
+  validates :long_url, presence: true
+  validates :short_url, length: { maximum: 16 } 
 
   private
     def add_short_url

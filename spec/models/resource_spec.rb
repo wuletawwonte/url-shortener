@@ -1,5 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe Resource, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject {
+    Resource.create(long_url: "https://www.long.url/this-is/a-long-url");
+  }
+
+  before {
+    subject.save
+  }
+
+  it 'resource subject should be valid' do
+    expect(subject).to be_valid 
+  end 
+
+  describe 'check for validations' do
+    it 'invalidate without long_url' do
+      subject.long_url = ''
+      expect(subject).to_not be_valid
+    end
+  end
 end
