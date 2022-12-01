@@ -23,5 +23,10 @@ RSpec.describe Resource, type: :model do
       subject.short_url = 'a'*17
       expect(subject).to_not be_valid
     end
+
+    it 'validate without short_url' do
+      subject.short_url = ''
+      expect(subject).to be_valid
+    end
   end
 end
