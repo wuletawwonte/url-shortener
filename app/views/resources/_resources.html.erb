@@ -1,18 +1,18 @@
 <%= turbo_frame_tag "resources" do %>
 
-  <div class="flex flex-col container max-w-xl mt-10 mx-auto w-full items-center justify-center bg-white dark:bg-gray-800" data-controller="clipboard">
+  <div class="flex flex-col container max-w-xl mt-10 mx-auto w-full items-center justify-center bg-white" data-controller="clipboard">
     <ul class="flex flex-col divide-y w-full">
       <% @resources.each do |resource| %>
         <li class="flex flex-row">
           <div class="select-none cursor-pointer hover:bg-gray-50 flex flex-1 items-center p-4">
             <div class="flex-1 pl-1">
-              <%= link_to resource.long_url, class: "font-medium dark:text-white", target: "_blank", data: { turbo_frame: "_top"} %>
-              <div class="text-gray-600 dark:text-gray-200 text-sm">Count: <%= resource.clicked %></div>
+              <%= link_to resource.long_url, class: "font-medium", target: "_blank", data: { turbo_frame: "_top"} %>
+              <div class="text-gray-600 text-sm">Count: <%= resource.clicked %></div>
             </div>
             <div class="flex flex-row justify-center items-center gap-2">
-              <%= link_to "#{url_for(resource.short_url)}", "/url/#{url_for(resource.short_url)}", data: { turbo_frame: "_top"}, target: "_blank", class: "text-purple-600 text-sm" %>
+              <%= link_to "#{resources_bounce_url(resource.short_url)}", "/url/#{url_for(resource.short_url)}", data: { turbo_frame: "_top"}, target: "_blank", class: "text-purple-600 text-sm" %>
 
-              <button data-clipboard-shorturl-param="<%= url_for(resource.short_url)%>" data-action="clipboard#copyText" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold text-sm hover:text-white py-1 px-2  border border-blue-500 hover:border-transparent rounded-full">
+              <button data-clipboard-shorturl-param="<%= resources_bounce_url(resource.short_url)%>" data-action="clipboard#copyText" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold text-sm hover:text-white py-1 px-2  border border-blue-500 hover:border-transparent rounded-full">
                 Copy
               </button>
             </div>
@@ -20,6 +20,6 @@
         </li>
       <% end %>
     </ul>
-    <%= paginate resources %>
+    <%= paginate @resources %>
   </div>
 <% end %>
