@@ -9,7 +9,7 @@ RSpec.describe Resource, type: :model do
     subject.save
   }
 
-  it 'resource subject should be valid' do
+  it 'resource subject is valid with valid attributes' do
     expect(subject).to be_valid 
   end 
 
@@ -26,6 +26,11 @@ RSpec.describe Resource, type: :model do
 
     it 'validate without short_url' do
       subject.short_url = ''
+      expect(subject).to be_valid
+    end
+
+    it 'validate with two word alias short_url' do
+      subject.short_url = 'wuletaw wonte'
       expect(subject).to be_valid
     end
   end
