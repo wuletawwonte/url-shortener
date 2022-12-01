@@ -23,7 +23,7 @@ class ResourcesController < ApplicationController
   private
 
     def resource_params
-      params.permit(:long_url)
+      params.permit(:long_url, :short_url)
     end
 
 end
