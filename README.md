@@ -1,24 +1,59 @@
-# README
+# URL-Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A mini-project that shortens long urls. 
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby on Rails
+- Ruby
+- [Kaminari](https://github.com/kaminari/kaminari) pagination gem.
+- [Stimulusjs](https://stimulus.hotwired.dev/)
 
-* System dependencies
+## Live Demo
 
-* Configuration
+[live link](#)
 
-* Database creation
+## Getting Started
 
-* Database initialization
+To get a local copy follow these simple example steps.
 
-* How to run the test suite
+- Make sure you have Postgres and Ruby installed.
+- Open the terminal window and clone the repository using this command: git clone https://github.com/wuletawwonte/url-shortener.git
+- Open the repo by typing : cd url-shortener
+- Install the project's dependencies by running this command: bundle install
+- Run `rails db:create` to create the database.
+- Run rails `rails db:schema:load` to create the relations in the database for the project based on the schema file inside the `db` folder.
+- Run `rails server` or `./bin/dev` to start the application on local server.
 
-* Services (job queues, cache servers, search engines, etc.)
+For developers run this command to auto build tailwindcss
 
-* Deployment instructions
+```bash
+./bin/dev
+```
 
-* ...
+## Authors
+
+👤 **Wuletaw Wonte**
+
+- GitHub: [@wuletawwonte](https://github.com/wuletawwonte)
+- Twitter: [@wuletaww](https://twitter.com/wuletaww)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/wuletaw-wonte)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+
+## 📝 License
+
+This project is [MIT](./LICENSE.md) licensed.
