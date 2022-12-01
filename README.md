@@ -4,6 +4,7 @@
 
 ## Built With
 
+
 - Ruby on Rails
 - Ruby
 - [Kaminari](https://github.com/kaminari/kaminari) pagination gem.
@@ -12,6 +13,14 @@
 ## Live Demo
 
 [live link](#)
+
+<p align="center">&nbsp;
+
+| Desktop |   Mobile |
+| ---------- | ----------- |
+ | <img align="center" src="https://user-images.githubusercontent.com/12524453/205069919-7251176a-1fd8-4edc-878d-3398eff286d5.png" alt="Wuletaw Wonte" width="500" /> | <img align="center" src="https://user-images.githubusercontent.com/12524453/205070434-309d7a96-19a3-40ba-86a0-ae537bb51b9d.png" alt="url shortener mobile view" width="410"/> |
+</p>
+
 
 ## Getting Started
 
