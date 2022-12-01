@@ -13,8 +13,14 @@
         <section class="mt-10">
           <%= form_with url: "resources/create", method: :post, data: { turbo_frame: "resources" } do |form| %>
             <div class="flex items-stretch mt-5">
-                <%= form.url_field :long_url, class: "bg-slate-200 rounded-r-none text-base leading-none text-gray-800 p-2 w-4/5 border border-transparent focus:outline-none focus:border-gray-500", placeholder: "Longer url .. ", required: true %>
+                <%= form.url_field :long_url, class: " bg-gray-50 rounded-r-none text-base leading-none text-gray-800 p-2 w-4/5 border border-gray-300 focus:outline-none focus:border-gray-500", placeholder: "Longer url .. ", required: true %>
                 <%= form.submit "shorten", class: "w-32 cursor-pointer rounded-l-none hover:bg-indigo-600 bg-indigo-700 text-xs font-medium leading-none text-white p-2 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700" %>
+            </div>
+            <div class="flex mt-2">
+                <span class="inline-flex items-center px-3 text-sm text-gray-800 bg-slate-200">
+                    localhost:3000/url/
+                </span>
+                <input type="text" id="website-admin" class="rounded-none bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2" placeholder="Bonnie Green">
             </div>
           <% end %>
         </section>
